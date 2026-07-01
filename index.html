@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>지쉘 쏘마지 코스메틱 — 미국 아마존 입점 로드맵 | VDVIA</title>
+<style>
+  html,body{margin:0;padding:0;background:#F4F6F7}
+  *{box-sizing:border-box}
+</style>
+<style>
+  :root{
+    --ground:#F4F6F7; --paper:#FFFFFF; --ink:#15242C; --ink-soft:#44565F;
+    --muted:#78888F; --line:#E1E7EA; --line-soft:#EDF1F3;
+    --teal:#0E5B63; --teal-deep:#0A3D43; --teal-tint:#E7F0F0;
+    --amber:#A9680B; --amber-tint:#FaF0DE; --amber-line:#EAD3A6;
+    --crit:#A2382C; --crit-tint:#F8E9E6; --crit-line:#E7C4BD;
+    --ok:#2F6E4E;
+    --sans:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Segoe UI",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  .wrap{font-family:var(--sans); color:var(--ink); background:var(--ground);
+    line-height:1.7; -webkit-font-smoothing:antialiased; padding:0 20px 80px;}
+  .sheet{max-width:940px; margin:0 auto;}
+  .wrap p{margin:0} .wrap ul{margin:0; padding:0; list-style:none}
+  /* 한글 가독성: 어절 단위 줄바꿈(글자 중간 끊김 방지) */
+  .wrap h1,.wrap h2,.wrap h3,.wrap p,.wrap li,.wrap .val,.wrap .itext,
+  .wrap .qt,.wrap .qd,.wrap .st,.wrap .sd,.wrap .nt,.wrap .opt,.wrap .meta span{
+    word-break:keep-all; overflow-wrap:break-word;}
+  .wrap .lead,.wrap .qd,.wrap .itext,.wrap .col li{text-wrap:pretty}
+
+  /* ---- masthead ---- */
+  .eyebrow{font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--teal);
+    font-weight:700; display:flex; gap:10px; align-items:center; margin-bottom:16px}
+  .eyebrow::after{content:""; flex:1; height:1px; background:var(--line)}
+  header.top{padding:46px 0 30px}
+  h1{font-size:clamp(28px,4.4vw,42px); line-height:1.18; font-weight:800; letter-spacing:-.02em;
+    text-wrap:balance; margin:0 0 18px}
+  h1 .sub{display:block; font-size:clamp(15px,2vw,18px); font-weight:600; color:var(--teal); margin-top:10px; letter-spacing:-.01em}
+  .thesis{font-size:clamp(17px,2.3vw,21px); font-weight:600; color:var(--ink);
+    border-left:4px solid var(--teal); padding:6px 0 6px 18px; margin:6px 0 20px; text-wrap:balance}
+  .meta{display:flex; flex-wrap:wrap; gap:8px 22px; font-size:13.5px; color:var(--muted); font-weight:500}
+  .meta b{color:var(--ink-soft); font-weight:700}
+
+  /* ---- section ---- */
+  section{margin-top:44px}
+  h2{font-size:clamp(20px,2.6vw,25px); font-weight:800; letter-spacing:-.02em; margin:0 0 6px}
+  .lead{color:var(--ink-soft); font-size:15.5px; margin-bottom:20px; max-width:64ch}
+
+  /* ---- TL;DR cards ---- */
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+  .kcard{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:20px}
+  .kcard .lab{font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--teal); font-weight:700; margin-bottom:9px}
+  .kcard .val{font-size:15px; font-weight:600; color:var(--ink); line-height:1.55}
+  .kcard .val span{color:var(--muted); font-weight:500}
+
+  /* ---- roadmap stepper ---- */
+  .rail{background:var(--teal-deep); border-radius:16px; padding:22px 20px; color:#EAF4F4; overflow-x:auto}
+  .rail .cap{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:#8FC3C6; font-weight:700; margin-bottom:16px}
+  .steps{display:flex; gap:0; min-width:640px}
+  .step{flex:1; position:relative; padding:0 12px; text-align:center}
+  .step:not(:last-child)::after{content:""; position:absolute; top:19px; right:-50%; width:100%; height:2px;
+    background:linear-gradient(90deg,#2C6E74,#2C6E74); z-index:0}
+  .step .num{position:relative; z-index:1; width:38px; height:38px; border-radius:50%; margin:0 auto 12px;
+    background:#0E5B63; border:2px solid #3E888E; color:#fff; font-weight:800; font-size:16px;
+    display:flex; align-items:center; justify-content:center; font-variant-numeric:tabular-nums}
+  .step .st{font-weight:700; font-size:14.5px; color:#fff; margin-bottom:4px}
+  .step .sd{font-size:12px; color:#9CC7CA; line-height:1.45}
+  .rail .note{margin-top:16px; font-size:12.5px; color:#B9D8D9; border-top:1px solid #205258; padding-top:12px}
+
+  /* ---- phase blocks ---- */
+  .phase{background:var(--paper); border:1px solid var(--line); border-radius:16px; padding:0; margin-top:14px; overflow:hidden}
+  .phead{display:flex; align-items:center; gap:14px; padding:18px 22px; background:var(--teal-tint); border-bottom:1px solid var(--line)}
+  .phead .pn{width:30px; height:30px; border-radius:8px; background:var(--teal); color:#fff; font-weight:800;
+    display:flex; align-items:center; justify-content:center; font-size:15px; flex:0 0 auto; font-variant-numeric:tabular-nums}
+  .phead h3{margin:0; font-size:18px; font-weight:800; letter-spacing:-.01em}
+  .phead .tag{margin-left:auto; font-size:11.5px; font-weight:700; letter-spacing:.04em; color:var(--teal-deep);
+    background:#fff; border:1px solid var(--amber-line); padding:4px 10px; border-radius:20px}
+  .pbody{display:grid; grid-template-columns:1.15fr 1fr 1fr; gap:0}
+  .col{padding:18px 22px; border-right:1px solid var(--line-soft)}
+  .col:last-child{border-right:none}
+  .col .clab{font-size:11px; letter-spacing:.1em; text-transform:uppercase; font-weight:700; margin-bottom:11px; display:flex; align-items:center; gap:7px}
+  .clab.doc{color:var(--ink-soft)} .clab.dec{color:var(--amber)} .clab.do{color:var(--teal)}
+  .col li{font-size:13.6px; line-height:1.5; padding-left:16px; position:relative; margin-bottom:8px; color:var(--ink)}
+  .col li::before{content:""; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--teal)}
+  .col.decs li::before{background:var(--amber); border-radius:2px}
+  .col li .m{color:var(--muted); font-size:12.5px}
+  .have{color:var(--ok); font-weight:700; font-size:12px}
+  .star{display:inline-block; background:var(--amber); color:#fff; font-size:10.5px; font-weight:800;
+    padding:1px 7px; border-radius:10px; letter-spacing:.03em; vertical-align:middle; margin-left:4px}
+  /* 제공 주체 칩 */
+  .zg{display:inline-block; background:var(--teal); color:#fff; font-size:10.5px; font-weight:800;
+    padding:1px 7px; border-radius:6px; letter-spacing:.02em; vertical-align:middle; margin-left:5px; white-space:nowrap}
+  .vd{display:inline-block; background:#EEF2F3; color:var(--ink-soft); border:1px solid var(--line);
+    font-size:10.5px; font-weight:700; padding:1px 6px; border-radius:6px; vertical-align:middle; margin-left:5px; white-space:nowrap}
+
+  /* ---- decision box ---- */
+  .decbox{background:var(--amber-tint); border:1px solid var(--amber-line); border-radius:16px; padding:26px 24px}
+  .decbox h2{color:var(--amber)}
+  .ditem{display:flex; gap:16px; padding:18px 0; border-top:1px dashed var(--amber-line)}
+  .ditem:first-of-type{border-top:none}
+  .dbadge{flex:0 0 auto; width:44px; height:44px; border-radius:11px; background:var(--amber); color:#fff;
+    font-weight:800; display:flex; align-items:center; justify-content:center; font-size:18px}
+  .ditem .qt{font-size:16.5px; font-weight:800; margin-bottom:6px; letter-spacing:-.01em}
+  .ditem .qd{font-size:14px; color:var(--ink-soft); line-height:1.6}
+  .ditem .opts{margin-top:10px; display:flex; flex-wrap:wrap; gap:8px}
+  .opt{font-size:12.5px; font-weight:600; background:#fff; border:1px solid var(--amber-line); color:var(--amber);
+    padding:5px 12px; border-radius:8px}
+  .why{margin-top:9px; font-size:12.5px; color:var(--muted)}
+
+  /* ---- info-needed ---- */
+  .info{background:var(--paper); border:1px solid var(--line); border-radius:16px; overflow:hidden}
+  .irow{display:flex; gap:16px; padding:16px 22px; border-top:1px solid var(--line-soft)}
+  .irow:first-child{border-top:none}
+  .ipill{flex:0 0 auto; font-size:11px; font-weight:800; letter-spacing:.03em; padding:4px 10px; border-radius:8px; height:fit-content}
+  .p-now{background:var(--amber-tint); color:var(--amber); border:1px solid var(--amber-line)}
+  .p-next{background:var(--teal-tint); color:var(--teal-deep); border:1px solid #BFDCDD}
+  .itext{font-size:14px; line-height:1.6}
+  .itext b{font-weight:800}
+
+  /* ---- callout ---- */
+  .flag{display:flex; gap:14px; background:var(--crit-tint); border:1px solid var(--crit-line);
+    border-radius:14px; padding:18px 20px; align-items:flex-start}
+  .flag .ic{flex:0 0 auto; width:26px; height:26px; border-radius:50%; background:var(--crit); color:#fff;
+    font-weight:800; display:flex; align-items:center; justify-content:center; font-size:15px}
+  .flag .ft{font-size:14px; line-height:1.6; color:var(--ink)} .flag .ft b{color:var(--crit)}
+  .flag.soft{background:var(--amber-tint); border-color:var(--amber-line)}
+  .flag.soft .ic{background:var(--amber)} .flag.soft .ft b{color:var(--amber)}
+
+  /* ---- next steps ---- */
+  .next{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+  .nstep{background:var(--paper); border:1px solid var(--line); border-radius:14px; padding:18px 20px}
+  .nstep .nn{font-size:12px; font-weight:800; color:var(--teal); letter-spacing:.08em; margin-bottom:8px}
+  .nstep .nt{font-size:14.5px; font-weight:600; line-height:1.55}
+
+  footer{margin-top:48px; padding-top:20px; border-top:1px solid var(--line); font-size:12.5px; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
+
+  @media(max-width:760px){
+    .grid3,.next{grid-template-columns:1fr}
+    .pbody{grid-template-columns:1fr}
+    .col{border-right:none; border-bottom:1px solid var(--line-soft)}
+    .col:last-child{border-bottom:none}
+  }
+  @media(prefers-reduced-motion:no-preference){
+    .fade{opacity:0; transform:translateY(10px); animation:rise .6s ease forwards}
+    @keyframes rise{to{opacity:1; transform:none}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap"><div class="sheet">
+
+  <header class="top fade">
+    <div class="eyebrow">VDVIA × 지쉘그룹 · 논의 자료</div>
+    <h1>지쉘 쏘마지 코스메틱 — 미국 아마존 입점 로드맵
+      <span class="sub">EXO 마스크팩을 VDVIA 자사 브랜드로 미국 아마존에 등록·판매하기 위한 절차·서류·의사결정 정리</span>
+    </h1>
+    <p class="thesis">아마존 입점은 계정 개설이 아니라, <b>사업 준비의 연속 과정</b>입니다.</p>
+    <div class="meta">
+      <span><b>대상 제품</b> 지쉘 쏘마지 EXO 마스크팩 (30g×5매)</span>
+      <span><b>판매 방식</b> VDVIA 자사 브랜드 판매</span>
+      <span><b>기반</b> 레몬더마 아마존 운영 시스템 재활용</span>
+      <span><b>운영 법인</b> 한국 법인(주식회사 비디비아) — 미국 법인·대리인 없이 진행</span>
+      <span><b>일자</b> 2026-07-01</span>
+    </div>
+  </header>
+
+  <!-- TL;DR -->
+  <section class="fade">
+    <h2>한눈에</h2>
+    <p class="lead">결론부터 말씀드리면, 이 미팅에서 필요한 것은 딱 <b>2가지 의사결정</b>과, 지쉘 측이 주셔야 할 <b>제품·규제 정보</b>입니다.</p>
+    <div class="grid3">
+      <div class="kcard">
+        <div class="lab">무엇을 파나</div>
+        <div class="val">지쉘 쏘마지 EXO 마스크팩<br><span>미국 아마존(미국 최대 이커머스)에 정식 리스팅</span></div>
+      </div>
+      <div class="kcard">
+        <div class="lab">누가 판매하나</div>
+        <div class="val">VDVIA가 자사 브랜드로 판매<br><span>레몬더마용 아마존 계정·FBA·리스팅 노하우 그대로 활용 → 초기 비용·시간 절감</span></div>
+      </div>
+      <div class="kcard">
+        <div class="lab">요청드리는 결정</div>
+        <div class="val">① 미국 상표 신규 등록 여부·명의<br>② 브랜드 소유·책임 주체 배정<br><span>이 2가지가 정해져야 등록 착수 가능</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- roadmap -->
+  <section class="fade">
+    <h2>전체 그림 — 준비부터 판매까지 5단계</h2>
+    <p class="lead">화장품(마스크팩)은 일반 상품과 달리 미국 <b>FDA(화장품법)·라벨·통관</b> 요건이 얹힙니다. 계정 개설은 이미 VDVIA가 보유 → 우리는 그 위에 규제·리스팅·물류만 얹으면 됩니다.</p>
+    <div class="rail">
+      <div class="cap">Amazon Entry Roadmap</div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div class="st">준비</div><div class="sd">시장조사 · 상표 · 규제서류(FDA)</div></div>
+        <div class="step"><div class="num">2</div><div class="st">진입</div><div class="sd">셀러 계정 · 브랜드 등록</div></div>
+        <div class="step"><div class="num">3</div><div class="st">등록</div><div class="sd">카테고리 · 바코드 · 리스팅 · A+</div></div>
+        <div class="step"><div class="num">4</div><div class="st">배송(FBA)</div><div class="sd">통관 · 입고 · 물류</div></div>
+        <div class="step"><div class="num">5</div><div class="st">운영</div><div class="sd">재고 · CS · 광고 · 리뷰</div></div>
+      </div>
+      <div class="note">가장 긴 리드타임은 <b style="color:#fff">상표(등록까지 통상 12~18개월, 단 출원 시점부터 병행 가능)</b>과 <b style="color:#fff">제품 규제서류 준비</b>입니다. 그래서 오늘 결정과 정보 요청이 전체 일정의 출발점입니다.</div>
+    </div>
+  </section>
+
+  <!-- phase detail -->
+  <section class="fade">
+    <h2>단계별 상세 — 하는 일 · 필요 서류 · 의사결정</h2>
+    <p class="lead">필요 서류의 <b>제공 주체</b>를 표시했습니다 — <span class="zg">지쉘 제공</span> 지쉘그룹에서 받아야 할 서류 · <span class="vd">VDVIA</span> VDVIA가 자체 처리(레몬더마 입점 경험) · <span class="have">보유</span> 이미 확보. <span class="star">결정</span> 표시는 의사결정이 필요한 지점입니다.</p>
+
+    <!-- P1 -->
+    <div class="phase">
+      <div class="phead"><span class="pn">1</span><h3>준비단계 — 상표 · 규제서류 · 시장조사</h3><span class="tag">핵심 결정이 여기</span></div>
+      <div class="pbody">
+        <div class="col"><div class="clab do">■ 하는 일</div><ul>
+          <li>경쟁·가격·키워드 시장조사</li>
+          <li>미국 상표(브랜드명) 확보</li>
+          <li>화장품 규제서류 정비(FDA·성분·안전성)</li>
+        </ul></div>
+        <div class="col"><div class="clab doc">▤ 필요 서류</div><ul>
+          <li>완제품 <b>전성분(INCI)</b> — 미국 표기용<span class="zg">지쉘 제공</span></li>
+          <li>EU <b>CPNP 서류</b>(안전성평가서·제품정보파일) — 이미 만드셨으면 그대로<span class="zg">지쉘 제공</span></li>
+          <li>제조사 <b>FDA 시설등록번호</b> + 미국 대리인<span class="zg">지쉘 제공</span> <span class="m">※ VDVIA·지쉘 모두 자체 미국 법인 없음 → 유료 대리인 서비스 지정</span></li>
+          <li>완제품 시험성적서(미생물·안정성)<span class="zg">지쉘 제공</span></li>
+        </ul></div>
+        <div class="col decs"><div class="clab dec">◆ 의사결정</div><ul>
+          <li><b>미국 상표 신규 등록 여부</b><span class="star">결정 ①</span></li>
+          <li><b>브랜드 소유·책임 주체</b><span class="star">결정 ②</span></li>
+          <li>미국용 마케팅 클레임 범위(재생·치료 표현 사용 여부)</li>
+        </ul></div>
+      </div>
+    </div>
+
+    <!-- P2 -->
+    <div class="phase">
+      <div class="phead"><span class="pn">2</span><h3>진입단계 — 셀러 계정 · 브랜드 등록</h3><span class="tag">계정은 VDVIA 보유</span></div>
+      <div class="pbody">
+        <div class="col"><div class="clab do">■ 하는 일</div><ul>
+          <li>아마존 셀러 계정에 브랜드 추가 <span class="have">계정 보유</span></li>
+          <li>신원·계좌·세금정보 확인</li>
+          <li>브랜드 레지스트리 가입(상표 필요)</li>
+        </ul></div>
+        <div class="col"><div class="clab doc">▤ 필요 서류</div><ul>
+          <li>사업자등록증명·여권(영문명 일치)·은행 거래명세 <span class="have">VDVIA 보유</span></li>
+          <li>카드주소=계정주소 100% 일치 확인 <span class="vd">VDVIA</span></li>
+          <li>브랜드 레지스트리용 <b>상표(등록/출원)</b> <span class="vd">VDVIA 진행 · 명의=결정①</span></li>
+        </ul></div>
+        <div class="col decs"><div class="clab dec">◆ 의사결정</div><ul>
+          <li>브랜드 레지스트리 <b>계정 소유 주체</b> = 상표 소유자와 일치 필요 <span class="star">결정 ②와 연결</span></li>
+        </ul></div>
+      </div>
+    </div>
+
+    <!-- P3 -->
+    <div class="phase">
+      <div class="phead"><span class="pn">3</span><h3>등록단계 — 카테고리 · 바코드 · 리스팅 · A+</h3></div>
+      <div class="pbody">
+        <div class="col"><div class="clab do">■ 하는 일</div><ul>
+          <li>뷰티 카테고리 승인</li>
+          <li>상품 페이지(제목·이미지·상세) 제작</li>
+          <li>A+ 콘텐츠·브랜드 스토어 구성</li>
+        </ul></div>
+        <div class="col"><div class="clab doc">▤ 필요 서류</div><ul>
+          <li><b>바코드(GTIN)</b> — 지쉘그룹 GS1로 SKU별 발행<span class="zg">지쉘 발행</span></li>
+          <li><b>미국 규격 라벨</b>(성분·책임자·주의문구) — VDVIA 제작(원료정보는 지쉘)<span class="vd">VDVIA 제작</span> <span class="m">※ 라벨엔 미국 내 연락 수단 필요 — 미국 주소 없이 이메일/웹사이트(전자적 연락처)로 충족 가능</span></li>
+          <li>순백배경 <b>제품 이미지</b>(고해상)<span class="vd">VDVIA 제작</span></li>
+          <li>브랜드 로고 벡터<span class="zg">지쉘 제공</span> <span class="m">※ SNS 대행 채널과 공유</span></li>
+        </ul></div>
+        <div class="col decs"><div class="clab dec">◆ 의사결정</div><ul>
+          <li>바코드 발행 주체(지쉘그룹 명의)</li>
+          <li>판매 SKU 구성(매수·용량·세트)</li>
+          <li>최종 클레임 문구 승인</li>
+        </ul></div>
+      </div>
+    </div>
+
+    <!-- P4 -->
+    <div class="phase">
+      <div class="phead"><span class="pn">4</span><h3>배송단계(FBA) — 통관 · 입고 · 물류</h3></div>
+      <div class="pbody">
+        <div class="col"><div class="clab do">■ 하는 일</div><ul>
+          <li>초도 물량 확정·생산</li>
+          <li>한국→미국 통관·아마존 창고 입고</li>
+          <li>운송사·3PL 계약</li>
+        </ul></div>
+        <div class="col"><div class="clab doc">▤ 필요 서류</div><ul>
+          <li>상업송장·패킹리스트·HTS 코드 <span class="vd">VDVIA·관세사</span></li>
+          <li>수입자(IOR): 한국 법인도 <b>비거주 수입자(NRI)+관세본드</b>로 가능 <span class="vd">VDVIA·관세사</span> <span class="m">※ 미국 법인 불필요</span></li>
+          <li>케이스팩 사양(입수·박스 치수·중량)<span class="zg">지쉘 제공</span></li>
+          <li><b>유통기한·로트</b> 제품 인쇄(FBA 필수)<span class="zg">지쉘 제공</span></li>
+        </ul></div>
+        <div class="col decs"><div class="clab dec">◆ 의사결정</div><ul>
+          <li>MOQ·리드타임·초도 물량</li>
+          <li><b>공급가·인코텀즈</b>(누가 운임·관세 부담)</li>
+        </ul></div>
+      </div>
+    </div>
+
+    <!-- P5 -->
+    <div class="phase">
+      <div class="phead"><span class="pn">5</span><h3>운영단계 — 재고 · CS · 광고 · 리뷰</h3></div>
+      <div class="pbody">
+        <div class="col"><div class="clab do">■ 하는 일</div><ul>
+          <li>재고·고객문의(VOC) 관리</li>
+          <li>광고(SB/SP)·리뷰 확보</li>
+          <li>아마존 정책 대응</li>
+        </ul></div>
+        <div class="col"><div class="clab doc">▤ 필요 서류</div><ul>
+          <li>제조물 배상책임(PL) 보험 <span class="m">※ 월매출 일정 규모 이상 시 아마존 필수</span> <span class="vd">VDVIA</span></li>
+          <li>지속 재입고 계획 <span class="vd">VDVIA</span></li>
+        </ul></div>
+        <div class="col decs"><div class="clab dec">◆ 의사결정</div><ul>
+          <li>광고 예산·가격/프로모션 정책</li>
+          <li>재입고 주기·물량</li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- decisions -->
+  <section class="fade">
+    <div class="decbox">
+      <h2>요청드리는 결정 2가지</h2>
+      <p class="lead" style="color:var(--amber)">이 두 가지가 정해져야 상표·바코드·브랜드 등록이 서로 어긋나지 않고 진행됩니다.</p>
+
+      <div class="ditem">
+        <div class="dbadge">①</div>
+        <div>
+          <div class="qt">미국 상표를 <u>‘지쉘 쏘마지 코스메틱’</u>으로 새로 등록해서 진행할까요?</div>
+          <div class="qd">아마존은 브랜드를 보호받으며 팔려면 미국 상표가 필요합니다(브랜드 레지스트리). 현재 미국 상표는 레몬더마용만 있고 <b>쏘마지 상표는 없습니다.</b> 새로 출원한다면 <b>브랜드 영문 표기</b>도 하나로 확정해야 합니다(현재 Zishel Xomage / 쏘마지 등 혼재). 참고로 <b>출원(pending)만으로도 브랜드 레지스트리 가입이 가능한 경로</b>가 있어(요건은 확인 필요), 등록 완료를 기다리지 않고 시작할 수 있습니다.</div>
+          <div class="opts"><span class="opt">지쉘그룹 명의 출원 → VDVIA에 사용권</span><span class="opt">VDVIA 명의 출원</span><span class="opt">우선 상표 없이 진행(보호 약함)</span></div>
+          <div class="why">※ 등록까지 통상 12~18개월(순조 시 12~14). 단 출원 시점부터 등록·리스팅을 병행할 수 있어 빨리 출원할수록 유리.</div>
+        </div>
+      </div>
+
+      <div class="ditem">
+        <div class="dbadge">②</div>
+        <div>
+          <div class="qt">브랜드 소유·책임 주체를 어느 법인으로 둘까요?</div>
+          <div class="qd">자사판매로 <b>VDVIA가 셀러·수입자</b>가 되는 것은 확정입니다. 다만 <b>브랜드 소유권</b>과 미국 라벨상 <b>책임자(Responsible Person)</b>·브랜드 레지스트리 계정을 지쉘그룹으로 둘지 VDVIA로 둘지 정해야 합니다. 상표 소유자(결정 ①)와 반드시 일치해야 아마존 등록이 통과됩니다. 양쪽 모두 <b>미국 법인·미국 대리인은 두지 않고 한국 법인 체계로 진행</b>합니다.</div>
+          <div class="opts"><span class="opt">지쉘그룹(한국 법인) 소유 + VDVIA 판매 위임장(LOA)</span><span class="opt">VDVIA(한국 법인) 소유·책임 일원화</span></div>
+          <div class="why">※ 결정 ①과 한 세트. 소유·상표·바코드 명의가 어긋나면 브랜드 등록이 반려됩니다.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- info needed -->
+  <section class="fade">
+    <h2>지쉘그룹에서 제공받아야 할 정보·서류</h2>
+    <p class="lead">아래만 모이면 나머지 등록·리스팅·물류는 VDVIA가 진행합니다. <b style="color:var(--amber)">우선</b> 항목은 없으면 착수가 막히는 것들입니다.</p>
+    <div class="info">
+      <div class="irow"><span class="ipill p-now">우선</span><div class="itext"><b>완제품 전성분(INCI) 전체</b> + 엑소좀 원료의 <b>정확한 INCI 명·원료 사양</b> — 미국 라벨·리스팅 표기용. <span class="m">(마스크팩은 인체유래 아님 — 확인 완료)</span></div></div>
+      <div class="irow"><span class="ipill p-now">우선</span><div class="itext"><b>EU CPNP 서류 일체</b>(안전성평가서·제품정보파일·신고번호). 이미 CPNP를 하셨으니 그 폴더를 통째로 주시면 성분·안전성·시험 서류가 한 번에 해결됩니다.</div></div>
+      <div class="irow"><span class="ipill p-now">우선</span><div class="itext"><b>실제 제조사(OEM)</b>와 그 공장의 <b>미국 FDA 시설등록번호</b>, PDRN 원료 원천, 그리고 <b>미국에 쓰고 싶은 마케팅 문구</b>(재생·치료 표현은 미국 기준상 조정 필요).</div></div>
+      <div class="irow"><span class="ipill p-next">다음</span><div class="itext">제품 사양(총 용량·pH·유통기한) · 미생물/방부력 시험 · SKU별 바코드(지쉘 GS1 발행) · 케이스팩·물류 스펙 · 공급가·MOQ·리드타임 · 브랜드 로고 벡터.</div></div>
+    </div>
+  </section>
+
+  <!-- claims note -->
+  <section class="fade">
+    <div class="flag soft">
+      <div class="ic">i</div>
+      <div class="ft"><b>한 가지 참고 — 미국 표현 조정.</b> 마스크팩 엑소좀은 <b>식물유래</b>로 확인되어 성분상 이슈는 없습니다. 다만 리스팅 문구는 미국 화장품 기준에 맞춰 다듬습니다 — <b>“whitening” → “brightening”</b>(사내 확정), “재생·치료” 등 의약품 연상 표현은 순화. 브랜드 측이 원하는 문구를 주시면 VDVIA가 사전 검수해 통과 가능한 형태로 정리합니다.</div>
+    </div>
+  </section>
+
+  <!-- next steps -->
+  <section class="fade">
+    <h2>다음 스텝</h2>
+    <div class="next">
+      <div class="nstep"><div class="nn">STEP 1</div><div class="nt">오늘 — 결정 ①·② 방향 합의 (상표·소유주체)</div></div>
+      <div class="nstep"><div class="nn">STEP 2</div><div class="nt">지쉘 측 ‘우선’ 정보 회신 (INCI·CPNP·OEM·FDA번호·클레임)</div></div>
+      <div class="nstep"><div class="nn">STEP 3</div><div class="nt">VDVIA 착수 — 상표 출원·브랜드 등록·라벨·리스팅 병렬 진행</div></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>VDVIA · 지쉘 쏘마지 코스메틱 미국 아마존 입점 논의 자료</span>
+    <span>내부 논의용 · 2026-07-01</span>
+  </footer>
+
+</div></div>
+</body>
+</html>
